@@ -303,12 +303,49 @@ body {
         padding: 8px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
+    body {
+        padding-top: 50px;
+        overflow-x: hidden;
+    };
+    #hero {
+        width: 100%;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    #hero-image {
+        display: none;
+    }
+    #hero-text{
+        width: 100%;
+    }
     #hero h2{
-        font-size: 24px;
+        font-size: 26px;
     }
 
     #hero p{
         font-size: 16px;
+    }
+    #services-grid {
+        grid-template-columns: 1fr;
+    }
+    #contact {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    #contact-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #contact-buttons{
+        width: 100%;
+    }
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+    footer {
+        width: 100%;
+        padding: 20px;
     }
 }
 
