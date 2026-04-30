@@ -11,6 +11,15 @@ navLinks.querySelectorAll('a').forEach(function(link) {
     });
 });
 
+const serviceHeaders = document.querySelectorAll('.service-header');
+
+serviceHeaders.forEach(function(header) {
+    header.addEventListener('click', function() {
+        const card = header.parentElement;
+        card.classList.toggle('open');
+    });
+});
+
 const galleryImages = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
