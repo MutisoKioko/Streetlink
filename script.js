@@ -37,3 +37,10 @@ lightboxOverlay.addEventListener('click', function() {
     lightbox.classList.remove('active');
     lightboxImg.src = '';
 });
+
+const lightboxClose = document.getElementById('lightbox-close');
+
+lightboxClose.addEventListener('click', function() {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+});
