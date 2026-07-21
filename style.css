@@ -1,3 +1,10 @@
+:root {
+    --navy: #001E54;
+    --navy-dark: #001440;
+    --orange: #FE6102;
+    --white: #FFFFFF;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +18,7 @@ body {
 }   
 
 #navbar {
-    background-color: #1a2540;
+    background-color: var(--navy);
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -24,18 +31,36 @@ body {
 }
 
 #logo {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #logo-img {
     width: auto;
-    height: 45px;
+    height: 42px;
 }
 
-#logo-link {
-    color: #3498db;
+#logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.logo-street {
+    color: var(--white);
+}
+
+.logo-link {
+    color: var(--orange);
+}
+
+.logo-sub {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #nav-links {
@@ -53,7 +78,7 @@ body {
 }
 
 #hero {
-    background: linear-gradient(135deg,#0d1b3e 0%, #1a4a8a 60%, #3498db 100%);
+    background: linear-gradient(135deg,var(--navy-dark) 0%, var(--navy) 60%, var(--orange) 100%);
     padding: 80px 60px;
     display: flex;
     justify-content: space-between;
@@ -70,7 +95,7 @@ body {
     right: 300px;
     width: 400px;
     height: 400px;
-    background: rgb(52, 152, 219, 0.15);
+    background: rgba(254, 97, 2, 0.15);
     border-radius: 50%;
 }
 
@@ -106,7 +131,7 @@ body {
 }
 
 #hero-button {
-    background-color: #3498db;
+    background-color: var(--orange);
     color: white;
     padding: 15px 35px;
     text-decoration: none;
@@ -127,7 +152,7 @@ body {
 
 #about-text h2  {
     font-size: 28px;
-    color: #1a2540;
+    color: var(--navy);
     margin-bottom: 20px;
 }
 
@@ -153,7 +178,7 @@ body {
     min-width: 120px;
 }
 .stat h3 {
-    color: #3498db;
+    color: var(--orange);
     font-size: 28px;
     margin-bottom: 8px;
     font-weight: 700;
@@ -166,7 +191,7 @@ body {
 
 .button {
     background-color: white;
-    color: #3498db;
+    color: var(--orange);
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
@@ -181,7 +206,7 @@ body {
 }
 
 .call-button {
-    background-color: #3498db;
+    background-color: var(--orange);
     color: white;
 }
 
@@ -196,7 +221,7 @@ body {
 }
 
 #services h2 {
-    color: #1a2540;
+    color: var(--navy);
     font-size: 28px;
     margin-bottom: 10px;
 }
@@ -241,13 +266,13 @@ body {
 
 .service-header h3 {
     flex: 1;
-    color: #1a2540;
+    color: var(--navy);
     font-size: 16px;
 }
 
 .arrow {
     font-size: 12px;
-    color: #3498db;
+    color: var(--orange);
     transition: transform 0.3s ease;
 }
 
@@ -277,12 +302,12 @@ body {
 
 .package-speed {
     font-weight: 600;
-    color: #1a2540;
+    color: var(--navy);
     font-size: 14px;
 }
 
 .package-price {
-    color: #3498db;
+    color: var(--orange);
     font-weight: 600;
     font-size: 14px;
 }
@@ -293,7 +318,7 @@ body {
 }
 
 #gallery h2 {
-    color: #1a2540;
+    color: var(--navy);
     font-size: 28px;
     margin-bottom: 10px;
 }
@@ -339,7 +364,7 @@ body {
 }
 
 #contact {
-    background-color: #1a2540;
+    background-color: var(--navy);
     padding: 60px 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -477,7 +502,7 @@ body {
 }
 
 #footer {
-    background-color: #111827;
+    background-color: var(--navy-dark);
     padding: 20px 40px;
     text-align: center;
 }
@@ -528,7 +553,7 @@ body {
 }
 
 #location h2 {
-    color: #1a2540;
+    color: var(--navy);
     font-size: 28px;
     margin-bottom: 10px;
 }
@@ -568,7 +593,7 @@ body {
 }
 
 .location-item h3 {
-    color: #1a2540;
+    color: var(--navy);
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -596,7 +621,7 @@ body {
 }
 
 #testimonials {
-    background-color: #1a2540;
+    background-color: var(--navy);
     padding: 60px 40px 60px 40px;
 }
 
@@ -632,7 +657,7 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: #3498db;
+    background-color: var(--orange);
     color: white;
     font-size: 14px;
     font-weight: 700;
