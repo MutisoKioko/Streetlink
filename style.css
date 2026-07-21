@@ -81,13 +81,21 @@ body {
     background: 
         radial-gradient(circle at bottom right, rgba(254, 97, 2, 0.35) 0%, rgba(254, 97, 2, 0) 55%),
         linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-    padding: 80px 60px;
+    padding: 100px 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
     position: relative;
     overflow: visible;
+}
+
+#hero-text {
+    max-width: 700px;
+    text-align: center;
+}
+
+#hero-button {
+    display: inline-block;
 }
 
 #hero::before {
@@ -102,22 +110,9 @@ body {
 }
 
 #hero-text {
-    flex: 1;
     z-index: 1;
 }
 
-#hero-image {
-    z-index: 1;
-}
-
-#hero-image img{
-    width: 450px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    border: 2px solid rgba(255, 255, 255, 0.15);
-}
 #hero h2{
     color: white;
     font-size: 42px;
@@ -447,9 +442,6 @@ body {
         width: 100%;
         flex-direction: column;
         padding: 40px 20px;
-    }
-    #hero-image {
-        display: none;
     }
     #hero-text{
         width: 100%;
