@@ -381,7 +381,56 @@
             </div>
         </div>
     </div>
+
+    <div id="review-form-wrap">
+        <h3>Had a great experience with us?</h3>
+        <p>Leave a review below — we'd love to hear from you.</p>
+        <form id="review-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="337bc85d-1059-4a11-acbb-2dedc9ba3905">
+            <input type="hidden" name="subject" value="New Website Review Submitted">
+            <div class="review-form-row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="location" placeholder="Your Town / City" required>
+            </div>
+            <textarea name="review" placeholder="Tell us about your experience..." rows="4" required></textarea>
+            <button type="submit" class="button call-button">Submit Review</button>
+        </form>
+        <p id="review-form-status"></p>
+    </div>
 </div>
+
+<script>
+document.getElementById('review-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('review-form-status');
+    const formData = new FormData(form);
+
+    status.textContent = "Sending...";
+    status.style.color = "rgba(255,255,255,0.6)";
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            status.textContent = "Thank you! Your review has been sent.";
+            status.style.color = "#4ADE80";
+            form.reset();
+        } else {
+            status.textContent = "Something went wrong. Please try again.";
+            status.style.color = "#F87171";
+        }
+    })
+    .catch(() => {
+        status.textContent = "Something went wrong. Please try again.";
+        status.style.color = "#F87171";
+    });
+});
+</script>
 
         <div id="contact">
             <div id="contact-inner">
